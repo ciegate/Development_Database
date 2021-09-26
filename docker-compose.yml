@@ -1,0 +1,14 @@
+services:
+    mysql:
+      image: mysql:5.7.35
+      command: "--default-authentication-plugin=mysql_native_password --innodb-strict-mode=false --innodb-log-file-size=512MB"
+      restart: always
+      ports:
+      - 3306:3306
+      environment: 
+      - MYSQL_ROOT_PASSWORD=alpha101
+      - MYSQL_DATABASE=record_synergy
+      - MYSQL_USER=devuser
+      - MYSQL_PASSWORD=alpha101
+      volumes:
+        - ./DB:/var/lib/mysql
