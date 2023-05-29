@@ -1,6 +1,6 @@
 services:
     mysql:
-      image: mysql:5.7.35
+      image: mysql:latest
       command: "--default-authentication-plugin=mysql_native_password --innodb-strict-mode=false --innodb-log-file-size=512MB"
       restart: always
       ports:
